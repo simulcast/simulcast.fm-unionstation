@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'futura-oblique';
+    src: url('FuturaStd-BoldOblique.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futura';
+    src: url('FuturaStd-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

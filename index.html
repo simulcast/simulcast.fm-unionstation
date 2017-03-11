@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Simulcast - Union Station</title>
+  <meta name="description" content="Simulcast is a band for everyone, everywhere, all at once.">
+  <meta name="author" content="Simulcast">
+  <link rel="image_src" href="http://simulcast.fm/unionstation/images/scgif2.gif" / >
+  <!-- Facebook meta -->
+  <meta property="og:title" content="Simulcast - Union Station" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://simulcast.fm/unionstation/" />
+  <meta property="og:image" content="http://simulcast.fm/unionstation/images/scgif2.gif" />
+  <!-- jQuery + user script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/libs/jquery-2.1.3.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="js/script.js"></script>
+  <!-- howler.js -->
+  <script language="javascript" src="js/libs/howler.core.js"></script>
+  <!-- recorderjs -->
+  <script language="javascript" src="js/recorderjs/recorder.js"></script>
+  <!-- hacktimerjs -->
+  <script language="javascript" src="js/libs/HackTimer.min.js"></script>
+  <!--user script -->
+  <script language="javascript" type="text/javascript" src="js/script.js"></script>
+  <script language="javascript" type="text/javascript" src="js/dom.js"></script>
+  <script language="javascript" type="text/javascript" src="js/howls.js"></script>
+  <script language="javascript" type="text/javascript" src="js/hash.js"></script>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <section class="header">
+    <a href="http://simulcast.fm" target="_blank">
+    <h2 class="title"><img width = "7.5%" src="images/logo.svg"></img><img width = "25%" src="images/logotype.svg"></img></h2>
+    </a>
+    <div id="record">
+      recording
+    </div>
+  </section>
+  <div class="container">
+  <!-- mobile first -->
+    <div class="row mobile-only">
+      <div class = "column centered">
+         <p>SIMULCAST - UNION STATION</p>
+         Interactive stream availble on larger devices.
+      </div>
+      <div class="one-third column">
+        <a href="http://embeddeddiscs.bigcartel.com/product/embed-001-simulcast-union-station" target="_blank">7" flexi single</a> available on <a href="http://embeddeddiscs.com" target="_blank">Embedded Discs.</a>
+      </div>
+      <div class="one-third column" style = "margin-top: 5%">
+      <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A75schN8ZY3Zb1yrogGMvFs" width="100%" height="15%" frameborder="0" allowtransparency="true"></iframe></p>
+      </div>
+      <div class="one-third column" style = "margin-top: -20%">
+        <p></p><iframe width="100%" height="15%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251721472%3Fsecret_token%3Ds-PvH45&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p>
+      </div>
+    </div>
+  <!-- now desktop -->
+    <div class = "larger">
+      <div class="row" id ="song-grid">
+        <div class="three columns choice" id="choice1">
+        back
+        </div>
+        <div class="three columns choice" id="choice2">
+        left
+        </div>
+        <div class="three columns choice" id="choice3">
+        right
+        </div>
+        <div class="three columns choice" id="choice4">
+        ahead
+        </div>
+      </div>
+      <div id="textcontainer">
+        <div id="lyric">
+            <span id="loadtext">loading...</span>
+            <span id="prompt">Union Station<br>
+                <span id="start">
+                    <a href = "#">start</a>
+                </span>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class = "larger">
+    <div id="social">
+    linear stream on available
+      <a href="https://soundcloud.com/thisissimulcast/union-station/s-PvH45" target="_blank">soundcloud</a>
+      or <a href="spotify:track:4m24X6ZuZ8sWIKo1ob4AOZ" target="_blank">spotify</a>
+      <br>
+      <a href="http://embeddeddiscs.bigcartel.com/product/embed-001-simulcast-union-station" target="_blank">7" flexi single</a> available on <a href="http://embeddeddiscs.com" target="_blank">embedded discs</a>
+    </div>
+    <span id="footer">
+    <span id="download">download your version</span> <br>
+    share via
+      <a href="http://tumblr.com/widgets/share/tool?canonicalUrl=http://simulcast.fm/unionstation/images/scgif.gif?data-content=http://simulcast.fm/unionstation/" target ="_blank">
+        gif
+      </a>/
+      <a href="https://www.facebook.com/sharer/sharer.php?u=simulcast.fm/unionstation&t=UnionStation"
+         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+         target="_blank" title="Share on Facebook">
+         facebook
+      </a>/
+      <a href="https://twitter.com/share?url=URLENCODED_URL&via=thisissimulcast&text=Union%20Station"
+         onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+         target="_blank" title="Share on Twitter">
+         tweet
+      </a><br>
+    </span>
+  </div>
+<!-- Google Analytics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75127762-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
